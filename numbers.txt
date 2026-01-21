@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    FILE *f_all, *f_even, *f_odd;
+    int n, num, i;
+
+    // Files will be CREATED automatically if they do not exist
+    f_all = fopen("numbers.txt", "w");
+    f_even = fopen("even.txt", "w");
+    f_odd  = fopen("odd.txt", "w");
+
+    if (f_all == NULL || f_even == NULL || f_odd == NULL) {
+        printf("Error creating files!\n");
+        return 1;
+    }
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    for (i = 1; i <= n; i++) {
+        printf("Enter number %d: ", i);
+        scanf("%d", &num);
+
+        fprintf(f_all, "%d\n", num);   // store all numbers
+
+        if (num % 2 == 0)
+            fprintf(f_even, "%d\n", num);  // even file
+        else
+            fprintf(f_odd, "%d\n", num);   // odd file
+    }
+
+    fclose(f_all);
+    fclose(f_even);
+    fclose(f_odd);
+
+    printf("\nFiles created successfully:\n");
+    printf("numbers.txt\n");
+    printf("even.txt\n");
+    printf("odd.txt\n");
+
+    return 0;
+}
+
