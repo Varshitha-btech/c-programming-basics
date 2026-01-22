@@ -42,3 +42,72 @@ void swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
+
+
+
+# Basic C Programs – Explanation
+
+# Introduction
+
+This repository contains **basic and common C programs** written to understand the **fundamentals of C programming**.
+These programs help beginners learn how C works, including input/output, decision making, loops, arrays, functions, and files.
+
+The code is written in a **simple and clear format**, making it easy for students to understand and practice.
+
+
+
+##  What You Will Learn from These Programs
+
+* Basic structure of a C program
+* How to take input and display output
+* Conditional statements (`if`, `if-else`, `switch`)
+* Looping concepts (`for`, `while`, `do-while`)
+* Arrays and strings
+* Functions and recursion
+* Pointers (basic level)
+* File handling basics
+
+
+
+##  Structure of a C Program (Common for All Codes)
+
+Every C program mainly contains the following parts:
+
+### 1️. Header Files
+c
+#include <stdio.h>
+* Used to include **built-in functions**
+* `stdio.h` allows input (`scanf`) and output (`printf`)
+
+### 2️. Main Function
+c
+int main()
+{
+    // code
+    return 0;
+}
+* Execution of program **starts from `main()`**
+* `return 0` shows successful program execution
+
+### 3️. Variable Declaration
+
+c
+int a, b;
+* Variables are used to **store data**
+* Common data types:
+  * `int` → integer
+  * `float` → decimal numbers
+  * `char` → single character
+
+### 4️. Input Statement
+c
+scanf("%d", &a);
+* Used to take input from the user
+* `&` is used to store value in memory
+
+### 5️. Output Statement
+
+c
+printf("Result = %d", a);
+* Used to display output on the screen
+
